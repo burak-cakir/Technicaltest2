@@ -51,11 +51,10 @@ struct loginView: View {
                 
                 .frame(maxWidth:.infinity)
                 .font(.headline)
-                                .foregroundColor(.white)
-                                .padding()
-                                
-                                .background(Color.green)
-                                .cornerRadius(15.0)
+                .foregroundColor(.white)
+                .padding()
+                .background(Color.green)
+                .cornerRadius(15.0)
                                 
                 
             }

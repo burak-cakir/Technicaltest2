@@ -4,11 +4,11 @@ import URLImage
 
 struct productView: View {
     
-    
+   
     var Repo = GenericRepository<fakeModel>()
     @State var list = [fakeModel]()
    
-       
+    @State private var searchText: String = ""
     
     
     let layout = [
@@ -19,8 +19,59 @@ struct productView: View {
         ]
     
     var body: some View {
+        
         VStack{
-            Text("deneme")
+            
+            
+            ZStack {
+                        Rectangle()
+                            .foregroundColor(Color("LightGray"))
+                        HStack {
+                            Image(systemName: "magnifyingglass")
+                            TextField("Search ..", text: $searchText)
+                        }
+                        
+                        .foregroundColor(.gray)
+                        .padding(.leading, 13)
+                    }
+                        .frame(height: 40)
+                        .cornerRadius(13)
+                        .padding()
+            
+            
+            HStack{
+                Button(action:{ }) {
+                    Image(systemName: "arrow.up.arrow.down.circle")
+                        .font(.title3)
+                    Text("Sırala  ")
+                }
+                .frame(maxWidth:.infinity)
+                .font(.headline)
+                .foregroundColor(.white)
+                .padding()
+                .background(Color.blue)
+                .opacity(0.7)
+                .cornerRadius(15.0)
+               
+               
+                 
+                Button(action:{ }) {
+                    Image(systemName: "line.3.horizontal.decrease.circle")
+                        .font(.title3)
+                    Text("Filtrele  ")
+                }
+                .frame(maxWidth:.infinity)
+                .font(.headline)
+                .foregroundColor(.white)
+                .padding()
+                .background(Color.blue)
+                .opacity(0.7)
+                .cornerRadius(15.0)
+      
+              
+            }
+            .padding(3)
+                
         }
      
         
@@ -29,24 +80,53 @@ struct productView: View {
         VStack{
                       
                     List(list, id:\.id){item in
-                        VStack{
-                            Text(item.title)
-                                .font(.subheadline)
+                        HStack{
+                            VStack{
+                                URLImage( getImage(myimage: item) ){ image in
+                                    image.resizable()
+                                }
+                                .frame(width: 80, height: 80)
+                            VStack{
+                                VStack{
+                                    Text(item.title)
+                                        .fixedSize()
+                                        .font(.caption)
+                                }
                                 
+                               
+                                    
+                                
+                                
+                                         
+                                                }
+                                if(item.price ?? 0.0 > 100.0 )
+                                {
+                                    Text(String (item.price ?? 0.0))
+                                        .foregroundColor(.red)
+                                        .bold()
+                                }
+                                else if (item.price ?? 0.0 > 20.0)
+                                {
+                                    Text(String (item.price ?? 0.0))
+                                        .foregroundColor(.blue)
+                                        .italic()
+                                        
+                                }
+                                else{
+                                    Text(String (item.price ?? 0.0))
+                                }
+                                
+                                
+                                 
+                             }
                             
-                            URLImage( getImage(myimage: item) ){ image in
-                                image.resizable()
-                                     
-                                            }
-                           
-                            Text(String (item.price ?? 0.0))
                             
-                            
-                             
-                         }
-                        .frame(width: 100, height: 100, alignment: .center)
+                        }
+                        
+                        
                          
                      }
+                    
                      
                      .onAppear(){
                          Repo.getAll(url: ""){ data in
@@ -55,7 +135,9 @@ struct productView: View {
                              
                          }
                      }
-                 }
+                     .frame(height:550)
+        }
+        
         
         
         

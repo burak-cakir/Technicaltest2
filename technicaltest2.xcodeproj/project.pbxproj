@@ -20,6 +20,7 @@
 		194B445527DF38EC0032D574 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 194B445427DF38EC0032D574 /* URLImage */; };
 		194B445727DF38EC0032D574 /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = 194B445627DF38EC0032D574 /* URLImageStore */; };
 		194B445927DF3D250032D574 /* fakeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194B445827DF3D250032D574 /* fakeRepository.swift */; };
+		195D9C7A27DF7238006179DF /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195D9C7927DF7238006179DF /* SwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		194B444F27DE0FFB0032D574 /* fakeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fakeModel.swift; sourceTree = "<group>"; };
 		194B445127DE163A0032D574 /* productView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = productView.swift; sourceTree = "<group>"; };
 		194B445827DF3D250032D574 /* fakeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fakeRepository.swift; sourceTree = "<group>"; };
+		195D9C7927DF7238006179DF /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			children = (
 				194B444D27DE0F740032D574 /* loginView.swift */,
 				194B445127DE163A0032D574 /* productView.swift */,
+				195D9C7927DF7238006179DF /* SwiftUIView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 			files = (
 				194B443627DDF18E0032D574 /* ContentView.swift in Sources */,
 				194B443427DDF18E0032D574 /* technicaltest2App.swift in Sources */,
+				195D9C7A27DF7238006179DF /* SwiftUIView.swift in Sources */,
 				194B445027DE0FFB0032D574 /* fakeModel.swift in Sources */,
 				194B444E27DE0F740032D574 /* loginView.swift in Sources */,
 				194B444627DE0D7B0032D574 /* genericRepository.swift in Sources */,

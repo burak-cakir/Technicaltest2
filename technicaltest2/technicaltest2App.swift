@@ -11,8 +11,7 @@ import SwiftUI
 struct technicaltest2App: App {
     var body: some Scene {
         WindowGroup {
-//            loginView()
-            productView()
+ContentView()
         }
     }
 }
