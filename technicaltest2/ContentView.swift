@@ -6,11 +6,18 @@
 //
 
 import SwiftUI
+import URLImage
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        
+        VStack{
+                 
+                   Text("content view dikkat")
+                  
+            
+        }
     }
 }
 
@@ -19,3 +26,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
